@@ -1,6 +1,14 @@
 package net.codejava;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "book")
 public class Book {
+
+    @Id
+    @Column(name = "book_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer bookId;
     private String title;
     private String author;
